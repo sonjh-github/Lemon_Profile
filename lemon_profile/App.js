@@ -2,6 +2,7 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import Start from "./Start";
 import Main from "./Main";
+import Chatbot from './Chatbot';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
@@ -14,7 +15,7 @@ function TabStack({navigation, route}){
   return(
     <Tab.Navigator tabBarOptions={{activeBackgroundColor:'#F4F4F4', inactiveBackgroundColor:'#F4F4F4'}}>
        <Tab.Screen name="Home" component={Main}/>
-       {/* <Tab.Screen name="Camera" component={Camera}/> */}
+       <Tab.Screen name="Chatbot" component={Chatbot}/>
     </Tab.Navigator>
   )
 }
@@ -25,8 +26,8 @@ export default function App(){
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown:false}}>
         <Stack.Screen name="Start" component={Start}/>
-        <Stack.Screen name="Main" component={TabStack}>
-        </Stack.Screen>
+        <Stack.Screen name="Main" component={TabStack}/>
+        <Stack.Screen name="Chatbot" component={Chatbot}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
