@@ -1,8 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput,TouchableOpacity, Image } from 'react-native';
 
-export default function Loading(){
-
+export default function Start({navigation}){
   return(
     <View style={styles.container}>
       <View style={styles.logo}>
@@ -12,7 +11,7 @@ export default function Loading(){
       <View style={styles.login}>
         <TextInput style={styles.textInput} placeholder="ID" />
         <TextInput style={styles.textInput} placeholder="PW" secureTextEntry={true}/>
-        <TouchableOpacity style={styles.loginbutton}>
+        <TouchableOpacity style={styles.loginbutton} onPress={()=>navigation.navigate('Main')}>
           <Text style={{color:"#FFFF"}}>로그인</Text>
         </TouchableOpacity> 
       </View>
