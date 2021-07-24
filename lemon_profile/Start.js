@@ -11,10 +11,16 @@ export default function Start({navigation}){
       <View style={styles.login}>
         <TextInput style={styles.textInput} placeholder="ID" />
         <TextInput style={styles.textInput} placeholder="PW" secureTextEntry={true}/>
-        <TouchableOpacity style={styles.loginbutton} onPress={()=>navigation.navigate('Main')}>
-          <Text style={{color:"#FFFF"}}>로그인</Text>
-        </TouchableOpacity> 
+        <View style={styles.button}>
+          <TouchableOpacity style={styles.loginbutton} onPress={()=>navigation.navigate('Main')}>
+            <Text style={{color:"#FFFF"}}>로그인</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.signbutton}>
+            <Text style={{color:"#FFFF"}}>회원가입</Text>
+          </TouchableOpacity>  
+        </View>
       </View>
+      
     </View>
     );
 }
@@ -61,6 +67,20 @@ const styles = StyleSheet.create({
       width:77.9,
       height: 39.78,
       marginTop:263,
+    },
+    button:{
+      flexDirection: 'row',
+      justifyContent: 'space-between'
+    },
+    signbutton:{
+      marginTop:40,
+      marginLeft:40,
+      backgroundColor:"#565E61",
+      width:100,
+      height:34,
+      alignItems:'center',
+      justifyContent:'center',
+      borderRadius:90
     }
   });
   
