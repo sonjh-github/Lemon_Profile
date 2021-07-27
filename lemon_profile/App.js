@@ -18,19 +18,7 @@ function TabStack({navigation, route}){
   return(
     <Tab.Navigator tabBarOptions={{activeBackgroundColor:'#F4F4F4', inactiveBackgroundColor:'#F4F4F4'}}
     screenOptions={({route})=>({
-      tabBarIcon: ()=>{
-      if (route.name==='Home'){
-        return <Entypo name="home" size={28} color='#000000'/>;
-      }else if (route.name==='Weekly'){
-        return <FontAwesome5 name="calendar-alt" size={28} color='#000000'/>
-      } else if (route.name==='Camera'){
-        return <MaterialCommunityIcons name="camera-iris" size={28} color='#000000'/>
-      }
-    },
-    })}>
-       <Tab.Screen name="Home" component={Main}/>
-       <Tab.Screen name="Weekly" component={Weekly}/>
-       <Tab.Screen name="Camera" component={Came}/>
+      tabBa
     </Tab.Navigator>
   )
 }
